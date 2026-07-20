@@ -15,7 +15,7 @@ object DriveVideoRepository {
     private const val ROOT_FOLDER_ID = "1zT7NUI7yEPQJccUuHQ2XSMuKIYjnpuEl"
 
     // TODO: reemplaza este valor con tu API Key real de Google Cloud Console
-    var API_KEY: String = "AIzaSyAIt7pXdMglKUr7Vgc0NLJDOrX0OK-bm6c"
+    var API_KEY: String = "TU_API_KEY_AQUI"
 
     private const val API_BASE = "https://www.googleapis.com/drive/v3"
 
