@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.home_page_intento1">
+
+    <!-- ══════════════════════════════════════════════════════════
+         PERMISOS
+         ══════════════════════════════════════════════════════════ -->
+
+    <!-- Internet: necesario para el API de Google Drive y ExoPlayer -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- CameraX: grabación de vídeo de señas (TranslationActivity) -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- Escritura en almacenamiento externo (solo API ≤ 28, VideoCapture usa MediaStore en 29+) -->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
+    <!-- Características de hardware requeridas -->
+    <uses-feature android:name="android.hardware.camera"         android:required="true" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+    <uses-feature android:name="android.hardware.microphone"     android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Home_page_intento1"
+        android:usesCleartextTraffic="true">
+
+        <!-- ── MAIN ─────────────────────────────────────────────── -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- ── BÚSQUEDA / SEÑAS ──────────────────────────────────── -->
+        <activity
+            android:name=".SearchActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- ── DETALLE DE CATEGORÍA ──────────────────────────────── -->
+        <activity
+            android:name=".CategoryDetailActivity"
+            android:exported="false" />
+
+        <!-- ── APRENDER ──────────────────────────────────────────── -->
+        <activity
+            android:name=".LearnActivity"
+            android:exported="false" />
+
+        <!-- ── TRADUCCIÓN / GRABACIÓN ────────────────────────────── -->
+        <activity
+            android:name=".TranslationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- ── VÍDEO PROCESADO ───────────────────────────────────── -->
+        <activity
+            android:name=".ProcessedVideoActivity"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

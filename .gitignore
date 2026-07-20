@@ -1,0 +1,39 @@
+# Android Studio / Gradle
+*.iml
+.gradle/
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+/.idea/deploymentTargetSelector.xml
+/.kotlin/
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Build outputs
+app/build/
+build/
+
+# Signing / credentials (NUNCA subir al repo)
+*.jks
+*.keystore
+*.p12
+release.properties
+
+# Google Services (credenciales Firebase/Cloud - mantener fuera del repo)
+google-services.json
+GoogleService-Info.plist
+service-account*.json
+*-credentials.json
+
+# Carpeta github anidada (repo dentro de repo)
+github/
+
+apk/*.apk
